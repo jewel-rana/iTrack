@@ -49,8 +49,8 @@
                             <td>{{ item.name }}</td>
                             <td>{{ item.type }}</td>
                             <td>{{ item.address }}</td>
-                            <td>{{ item.package_id }} ({{ item.package_id }})</td>
-                            <td>{{ item.package_id }}</td>
+                            <td>{{ item.packege_id }} ({{ item.packege_id }})</td>
+                            <td>{{ item.packege_id }}</td>
                             <td>{{ item.status }}</td>
                             <td>
                               <router-link :to="'/dashboard/item/show/' + item.id" class="btn btn-default btn-sm"><span class="fa fa-eye"></span></router-link>
@@ -151,10 +151,10 @@
                           <has-error :form="form" field="email"></has-error>
                         </div>
                         <div class="form-group">
-                          <select v-model="form.package_id" name="packege" placeholder="Billing Package" 
+                          <select v-model="form.packege_id" name="packege" placeholder="Billing Packege" 
                             class="form-control" :class="{ 'is-invalid': form.errors.has('packege') }" required>
-                            <option value="">Select Package</option>
-                            <option v-for="package in packages" :key="package.id" :value="package.id">{{ package.name }} {{ package.price }}</option>
+                            <option value="">Select Packege</option>
+                            <option v-for="packege in packeges" :key="packege.id" :value="packege.id">{{ packege.name }} {{ packege.price }}</option>
                           </select>
                           <has-error :form="form" field="packege"></has-error>
                         </div>
@@ -187,7 +187,7 @@
               keyword : '',
               editmode : false,
               customers : {},
-              packages : {},
+              packeges : {},
               zones : {},
               areas : {},
               ids : [],
@@ -200,7 +200,7 @@
                 email : '',
                 cell_1 : '',
                 cell_2 : '',
-                package_id : '',
+                packege_id : '',
                 type : '',
                 zone_id : '',
                 area_id : '',
@@ -217,7 +217,7 @@
             .then(( data ) => {
               console.log(data)
               this.customers = data.data.customers;
-              this.packages = data.data.packages;
+              this.packeges = data.data.packeges;
               this.zones = data.data.areas;
             } )
             .catch(() => {});

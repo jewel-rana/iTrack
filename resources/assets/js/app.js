@@ -44,16 +44,10 @@ Vue.use(progressbar, {
 //vue routes
 let routes = [
     { path: '/dashboard', component: require('./components/dashboard/home/Index.vue') },
-	{ path: '/dashboard/location', component: require('./components/dashboard/location/Index.vue') },
-    { path: '/dashboard/customer', component: require('./components/dashboard/customer/Index.vue') },
-    { path: '/dashboard/customer/show/:id', component: require('./components/dashboard/customer/Show.vue') },
-    { path: '/dashboard/area', component: require('./components/dashboard/area/Index.vue') },
-    { path: '/dashboard/area/view/:id', component: require('./components/dashboard/area/View.vue') },
-    { path: '/dashboard/package', component: require('./components/dashboard/package/Index.vue') },
-    { path: '/dashboard/billing', component: require('./components/dashboard/billing/Index.vue') },
-    { path: '/dashboard/report', component: require('./components/dashboard/report/Index.vue') },
-    { path: '/dashboard/management', component: require('./components/dashboard/management/Index.vue') },
-    { path: '/dashboard/requests', component: require('./components/dashboard/requests/Index.vue') }
+	{ path: '/dashboard/project', component: require('./components/dashboard/project/Index.vue') },
+    { path: '/dashboard/department', component: require('./components/dashboard/department/Index.vue') },
+    { path: '/dashboard/team', component: require('./components/dashboard/team/Index.vue') },
+    { path: '/dashboard/management', component: require('./components/dashboard/management/Index.vue') }
 ];
 
 const router = new VueRouter({
